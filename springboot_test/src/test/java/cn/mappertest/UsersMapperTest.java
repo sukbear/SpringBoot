@@ -25,6 +25,7 @@ public class UsersMapperTest {
 	@Transactional
 	@Rollback(true)
 	//测试事务不提交至数据库
+	//测试提交至远程git
 	public void testInsertList() {
 		List<Users> list = new ArrayList<Users>();
 		for(int i = 0; i < 5;i++) {
