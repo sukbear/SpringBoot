@@ -13,18 +13,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select id,name,age from
 		users
 	</select>
-	
+
 	<select id="selectUsersById" resultType="users">
-		select id,name,age from users where id = #{value}
+		select id,name,age from
+		users where id = #{value}
 	</select>
-	
+
 	<update id="updateUser" parameterType="users">
-		update users set name=#{name} ,age=#{age} where id=#{id}
+		update users set
+		name=#{name} ,age=#{age} where id=#{id}
 	</update>
-	
+
 	<delete id="deleteUserById">
 		delete from users where id = #{value}
 	</delete>
-	
+
+	<insert id="insertList">
+		insert into users(name,age) values
+		<foreach collection="list" item="users" separator=",">
+			(#{users.name},#{users.age})
+		</foreach>
+	</insert>
 
 </mapper>

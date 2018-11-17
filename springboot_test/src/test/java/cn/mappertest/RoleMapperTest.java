@@ -15,16 +15,15 @@ import cn.test.pojo.Role;
 import junit.framework.Assert;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=App.class)
+@SpringBootTest(classes = App.class)
 public class RoleMapperTest {
 	@Autowired
 	private RoleMapper roleMapper;
-	/*@Test
-	public void testGetAll() {
-		List<Role> list = new ArrayList<Role>();
-		list = roleMapper.getAll();
-		Assert.assertNotNull(list);
-	}*/
+
+	/*
+	 * @Test public void testGetAll() { List<Role> list = new ArrayList<Role>();
+	 * list = roleMapper.getAll(); Assert.assertNotNull(list); }
+	 */
 	@Test
 	public void testGetOne() {
 		Role role = new Role();
